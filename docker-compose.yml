@@ -1,0 +1,48 @@
+services:
+    market_web:
+        container_name: market_web
+        image: nginx:alpine
+        ports:
+            - "8040:80"
+        volumes:
+            - ./:/var/www
+            - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
+        depends_on:
+            - market_app
+        networks:
+            - market_network
+
+    market_app:
+        container_name: market_app
+        build:
+            context: .
+            dockerfile: ./docker/Dockerfile
+        depends_on:
+            - market_db
+        volumes:
+            - ./:/var/www
+        networks:
+            - market_network
+        ports:
+            - "9080:9000"
+
+    market_db:
+        image: mysql
+        container_name: market_db
+        restart: unless-stopped
+        environment:
+            MYSQL_DATABASE: ${DB_DATABASE}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_USER: ${DB_USERNAME}
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+        volumes:
+            - market_database:/var/lib/mysql
+        networks:
+            - market_network
+        expose:
+            - 3344
+networks:
+    market_network:
+        driver: bridge
+volumes:
+    market_database:
