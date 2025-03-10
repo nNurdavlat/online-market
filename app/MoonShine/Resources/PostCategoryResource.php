@@ -9,6 +9,7 @@ use App\Models\PostCategory;
 
 use MoonShine\Laravel\Resources\ModelResource;
 use MoonShine\UI\Components\Layout\Box;
+use MoonShine\UI\Fields\Date;
 use MoonShine\UI\Fields\ID;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
@@ -31,6 +32,8 @@ class PostCategoryResource extends ModelResource
     {
         return [
             ID::make()->sortable(),
+            Text::make('Title', 'name'),
+            Date::make('Updated','updated_at')->sortable(),
         ];
     }
 
@@ -54,7 +57,8 @@ class PostCategoryResource extends ModelResource
     {
         return [
             ID::make(),
-            Text::make('name')
+            Text::make('Title', 'name'),
+            Date::make('Updated','updated_at'),
         ];
     }
 
