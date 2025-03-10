@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->text('content');
             $table->string('image');
+            $table->foreignId('category_id')->constrained('post_categories');
             $table->timestamps();
         });
     }

@@ -4,9 +4,12 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
+use App\Models\PostCategory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Post;
 
+use MoonShine\Core\Resources\Resource;
+use MoonShine\Laravel\Fields\Relationships\BelongsTo;
 use MoonShine\Laravel\Resources\ModelResource;
 use MoonShine\UI\Components\Layout\Box;
 use MoonShine\UI\Fields\Date;
@@ -50,6 +53,14 @@ class PostResource extends ModelResource
                 Text::make('Title', 'title'),
                 Text::make('Content'),
                 Image::make('Image', 'image'),
+                BelongsTo::make(
+                    'Category',
+                    'postCategory',
+                    fn($item)=>"$item->id. $item->name",
+                    PostCategoryResource::class)
+                        ->afterFill(
+                            fn($field) => $field->setColumn('category_id')
+                        ),
             ])
         ];
     }
@@ -62,9 +73,16 @@ class PostResource extends ModelResource
         return [
             ID::make(),
             Text::make('Title', 'title'),
-            Text::make('Content', 'content'),
+            Text::make('Content'),
             Image::make('Image', 'image'),
-            Date::make('Published at', 'updated_at')
+            BelongsTo::make(
+                'Category',
+                'postCategory',
+                fn($item)=>"$item->id. $item->name",
+                PostCategoryResource::class)
+                ->afterFill(
+                    fn($field) => $field->setColumn('category_id')
+                ),
         ];
     }
 

@@ -15,4 +15,9 @@ class PostCategory extends Model
             $model->slug = Str::slug($model->name);  // Column name 'name'
         });
     }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'category_id');
+    }
 }

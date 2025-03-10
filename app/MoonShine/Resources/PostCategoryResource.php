@@ -7,12 +7,15 @@ namespace App\MoonShine\Resources;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\PostCategory;
 
+use MoonShine\Laravel\Fields\Relationships\BelongsTo;
+use MoonShine\Laravel\Fields\Relationships\HasMany;
 use MoonShine\Laravel\Resources\ModelResource;
 use MoonShine\UI\Components\Layout\Box;
 use MoonShine\UI\Fields\Date;
 use MoonShine\UI\Fields\ID;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\UI\Fields\Image;
 use MoonShine\UI\Fields\Text;
 use \Illuminate\Support\Str;
 
@@ -59,6 +62,12 @@ class PostCategoryResource extends ModelResource
             ID::make(),
             Text::make('Title', 'name'),
             Date::make('Updated','updated_at'),
+            HasMany::make(
+                'Post',
+                'posts',
+                fn($item)=>"$item->name",
+                PostResource::class)->afterFill( fn($field) => $field->setColumn('category_id')
+            ),
         ];
     }
 
