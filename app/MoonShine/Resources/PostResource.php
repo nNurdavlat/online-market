@@ -61,6 +61,10 @@ class PostResource extends ModelResource
     {
         return [
             ID::make(),
+            Text::make('Title', 'title'),
+            Text::make('Content', 'content'),
+            Image::make('Image', 'image'),
+            Date::make('Published at', 'updated_at')
         ];
     }
 
