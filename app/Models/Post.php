@@ -2,9 +2,16 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Post extends Model
 {
-    //
+    protected static function boot(){
+        parent::boot();
+        static::creating(function($model){
+            $model->slug = Carbon::now() . Str::slug($model->title); // Column name 'title'
+        });
+    }
 }
