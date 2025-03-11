@@ -14,7 +14,7 @@ use App\MoonShine\Resources\MoonShineUserRoleResource;
 use App\MoonShine\Resources\PostCategoryResource;
 use App\MoonShine\Resources\PostResource;
 use App\MoonShine\Resources\CategoryResource;
-use App\MoonShine\Resources\ProductVolumResource;
+use App\MoonShine\Resources\ProductVolumeResource;
 use App\MoonShine\Resources\ProductResource;
 
 class MoonShineServiceProvider extends ServiceProvider
@@ -35,7 +35,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 PostCategoryResource::class,
                 PostResource::class,
                 CategoryResource::class,
-                ProductVolumResource::class,
+                ProductVolumeResource::class,
                 ProductResource::class,
             ])
             ->pages([

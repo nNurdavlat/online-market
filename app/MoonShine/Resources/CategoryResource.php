@@ -32,7 +32,7 @@ class CategoryResource extends ModelResource
         return [
             ID::make()->sortable(),
             Text::make('Name'),
-            Text::make('parent_id'),
+            Text::make('parent_id')->nullable()->default(null),
         ];
     }
 
@@ -53,7 +53,7 @@ class CategoryResource extends ModelResource
                     CategoryResource::class)
                     ->afterFill(
                         fn($field) => $field->setColumn('parent_id')
-                    ),
+                    )->nullable()->default(null),
             ])
         ];
     }

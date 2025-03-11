@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\MoonShine\Resources;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\ProductVolum;
+use App\Models\ProductVolume;
 
 use MoonShine\Laravel\Resources\ModelResource;
 use MoonShine\UI\Components\Layout\Box;
@@ -16,13 +16,13 @@ use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\UI\Fields\Text;
 
 /**
- * @extends ModelResource<ProductVolum>
+ * @extends ModelResource<ProductVolume>
  */
-class ProductVolumResource extends ModelResource
+class ProductVolumeResource extends ModelResource
 {
-    protected string $model = ProductVolum::class;
+    protected string $model = ProductVolume::class;
 
-    protected string $title = 'ProductVolums';
+    protected string $title = 'ProductVolume';
 
     /**
      * @return list<FieldContract>
@@ -60,7 +60,7 @@ class ProductVolumResource extends ModelResource
     }
 
     /**
-     * @param ProductVolum $item
+     * @param ProductVolume $item
      *
      * @return array<string, string[]|string>
      * @see https://laravel.com/docs/validation#available-validation-rules

@@ -4,15 +4,18 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
+use App\Models\ProductVolume;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Product;
 
+use MoonShine\Laravel\Fields\Relationships\BelongsTo;
 use MoonShine\Laravel\Resources\ModelResource;
 use MoonShine\UI\Components\Layout\Box;
 use MoonShine\UI\Fields\ID;
 use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\UI\Fields\Text;
+use \Illuminate\Database\Eloquent\Relations;
 
 /**
  * @extends ModelResource<Product>
@@ -34,6 +37,7 @@ class ProductResource extends ModelResource
             Text::make('Description'),
             Text::make('Price')->sortable(),
             Text::make('Sale Price'),
+            Text::make('Product volume')
         ];
     }
 
@@ -49,6 +53,14 @@ class ProductResource extends ModelResource
                 Text::make('Description'),
                 Text::make('Price'),
                 Text::make('Sale Price'),
+                BelongsTo::make(
+                    'Volume',
+                    'ProductVolume',
+                    fn($item)=>"$item->id. $item->name",
+                        ProductVolumeResource::class)
+                ->afterFill(
+                    fn($field) => $field->setColumn('volume_id')
+                )
             ])
         ];
     }

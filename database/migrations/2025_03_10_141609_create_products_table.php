@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->decimal('price');
             $table->decimal('sale_price');
+            $table->foreignId('volume_id')->constrained('product_volumes');
             $table->timestamps();
         });
     }
