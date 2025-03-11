@@ -37,7 +37,14 @@ class ProductResource extends ModelResource
             Text::make('Description'),
             Text::make('Price')->sortable(),
             Text::make('Sale Price'),
-            Text::make('Product volume')
+            BelongsTo::make(
+                'Volume',
+                'ProductVolume',
+                fn($item)=>"$item->id. $item->name",
+                ProductVolumeResource::class)
+                ->afterFill(
+                    fn($field) => $field->setColumn('volume_id')
+                )
         ];
     }
 
@@ -76,6 +83,7 @@ class ProductResource extends ModelResource
             Text::make('Description'),
             Text::make('Price')->sortable(),
             Text::make('Sale Price'),
+
         ];
     }
 

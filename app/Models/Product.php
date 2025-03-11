@@ -7,6 +7,6 @@ class Product extends Model
 {
     public function productVolume()
     {
-        return $this->belongsTo(ProductVolume::class, 'volume_id', 'volume_id');
+        return $this->belongsTo(ProductVolume::class, 'volume_id', 'id');
     }
 }
