@@ -41,6 +41,8 @@ services:
             - market_network
         expose:
             - 3344
+
+
     market_node:
         container_name: market_node
         image: node:alpine
@@ -48,13 +50,15 @@ services:
             -   ./:/var/www
         networks:
             - market_network
-        command: sh -c "yarn install && yarn run dev"
+        command: sh -c "cd /var/www yarn install && yarn run build"
         depends_on:
             -   market_app
         ports:
-            -   "9080:8000"
+            -   "5173:5173"
+
 networks:
     market_network:
         driver: bridge
+
 volumes:
     market_database:
