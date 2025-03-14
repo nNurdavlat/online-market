@@ -1,0 +1,48 @@
+/* newsletter-popup */
+.bb-popnews-box {
+    transform: translate(-50%, -50%);
+    &:hover {
+        .bb-popnews-close {
+            height: 25px !important;
+        }
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        transform: translateY(3rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes fadeOutUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(3rem);
+    }
+}
+
+.bb-fadeInDown {
+    animation: fadeInDown 0.3s ease-in-out forwards;
+}
+
+.bb-fadeOutUp {
+    animation: fadeOutUp 0.2s ease-in-out forwards;
+}
+
+.bb-popnews-close {
+    &:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        bottom: 3px;
+        left: 3px;
+        border: 2px solid $border-fff;
+        border-radius: 50%;
+    }
+}

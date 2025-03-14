@@ -1,0 +1,57 @@
+/* tools-sidebar */
+.bb-tools-sidebar {
+	.bb-tools-sidebar-toggle {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.102);
+	}
+	.bb-tools-detail {		
+		@include scrollbar;
+		.bb-tools-block {
+			.bb-tools-dark,
+			.bb-tools-box,
+			.bb-tools-rtl {
+				.active-dark,
+				.active-box,
+				.active-rtl {
+					img {
+						border-color: $primary;
+					}
+					&:after {
+						content: "\EB79";
+						width: 30px;
+						height: 30px;
+						font-size: 20px;
+						font-family: $remixico;
+						position: absolute;
+						top: 10px;
+						right: 10px;
+						border-radius: 10px;
+						background-color: $primary;
+						color: $text-fff;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+.active-variant{
+	&:after {
+		font-family: $remixico;
+		content: "\EB79";
+		height: 35px;
+		width: 35px;
+		font-size: 20px;
+		position: absolute;
+		color: $text-fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.open-tools {
+	transform: translateX(0) !important;
+}

@@ -1,0 +1,38 @@
+/* About */
+.bb-team-box {
+    &:hover {
+        .bb-team-img {
+            .bb-team-socials {
+                right: 0;
+            }
+        }
+    }
+    .bb-team-img {
+        .bb-team-socials {
+            .inner-shape {
+                &:before {
+                    content: "";
+                    height: 20px;
+                    width: 20px;
+                    position: absolute;
+                    top: -20px;
+                    right: 0;
+                    background-size: 100%;
+                    background-image: url("../img/team/top-shape.png");
+                    background-repeat: no-repeat;
+                }
+                &:after {
+                    content: "";
+                    height: 20px;
+                    width: 20px;
+                    position: absolute;
+                    top: 147px;
+                    right: 0;
+                    background-size: 100%;
+                    background-image: url("../img/team/bottom-shape.png");
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}

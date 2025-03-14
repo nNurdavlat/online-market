@@ -1,0 +1,109 @@
+/* Single product page */
+ul#ProTab {
+    li.active {
+        a {
+            color: $primary;
+        }
+    }
+}
+
+.single-pro-slider {
+    .single-nav-thumb {
+        .slick-list {
+            margin: 0 -8px;
+        }
+        .single-slide {
+            display: block !important;
+        }
+        .slick-slide {
+            &:hover {
+                img {
+                    border-color: $primary;
+                }
+            }
+        }
+        .slick-slide.slick-current.slick-active {
+            img {
+                border-color: $primary;
+            }
+        }
+        .slick-arrow {
+            top: 42%;
+        }
+        button {
+            background: transparent;
+            outline: 0;
+            border: 0;
+        }
+        .slick-arrow.slick-prev {
+            left: 0;
+            right: auto;
+        }
+        .slick-arrow {
+            position: absolute;
+            top: 55%;
+            left: auto;
+            right: auto;
+            margin: 0 auto;
+            font-size: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            z-index: 1;
+            transform: translateY(-50%);
+            &:before {
+                content: "";
+                color: $text-color;
+                position: relative;
+                font-size: 42px;
+                width: 100%;
+                line-height: 30px;
+                height: 30px;
+            }
+        }
+        .slick-arrow.slick-prev {
+            &:before {
+                font-family: $remixico;
+                content: "\EA52";
+            }
+        }
+        .slick-arrow.slick-next {
+            right: 0;
+            left: auto;
+            &:before {
+                font-family: $remixico;
+                content: "\EA54";
+            }
+        }
+    }
+}
+
+.bb-single-pro-contact {
+    .bb-single-pro-weight {
+        .bb-pro-variation-contant {
+            ul {
+                li.active-variation {
+                    background-color: $primary;
+                    span{
+                        color: $text-fff;
+                    }
+                }
+            }
+        }
+    }
+    .bb-single-qty {
+        .bb-pro-actions {
+            a {
+                &:hover {
+                    background-color: $primary;
+                    i {
+                        color: $text-fff;
+                    }
+                }
+            }
+        }
+    }
+}
