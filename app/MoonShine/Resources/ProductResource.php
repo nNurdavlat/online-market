@@ -37,7 +37,23 @@ class ProductResource extends ModelResource
             Text::make('Description'),
             Text::make('Price')->sortable(),
             Text::make('Sale Price'),
-            Text::make('Product volume')
+            Text::make('Quantity'),
+            BelongsTo::make(
+                'Category',
+                'category',
+                fn($item)=>"$item->id. $item->name",
+                CategoryResource::class)
+                    ->afterFill(
+                        fn($field) => $field->setColumn('category_id')
+            ),
+            BelongsTo::make(
+                'Volume',
+                'ProductVolume',
+                fn($item)=>"$item->id. $item->name",
+                ProductVolumeResource::class)
+                ->afterFill(
+                    fn($field) => $field->setColumn('volume_id')
+                )
         ];
     }
 
@@ -53,6 +69,15 @@ class ProductResource extends ModelResource
                 Text::make('Description'),
                 Text::make('Price'),
                 Text::make('Sale Price'),
+                Text::make('Quantity'),
+                BelongsTo::make(
+                    'Category',
+                    'category',
+                    fn($item)=>"$item->id. $item->name",
+                    CategoryResource::class)
+                    ->afterFill(
+                        fn($field) => $field->setColumn('category_id')
+                ),
                 BelongsTo::make(
                     'Volume',
                     'ProductVolume',
@@ -76,6 +101,15 @@ class ProductResource extends ModelResource
             Text::make('Description'),
             Text::make('Price')->sortable(),
             Text::make('Sale Price'),
+            Text::make('Quantity'),
+            BelongsTo::make(
+                'Category',
+                'category',
+                fn($item)=>"$item->id. $item->name",
+                CategoryResource::class)
+                    ->afterFill(
+                        fn($field) => $field->setColumn('category_id')
+            ),
         ];
     }
 
