@@ -1,0 +1,195 @@
+/* Hero */
+.section-hero {
+    &:after {
+        content: "";
+        width: 800px;
+        height: 1000px;
+        top: 0;
+        right: 0;
+    }
+    .bb-scroll-Page {
+        .scroll-bar {
+            &:after {                
+                @include ease3;
+                content: "";
+                height: 80px;
+                width: 1px;
+                position: absolute;
+                right: -50px;
+                bottom: -33px;
+                background-color: $bg-000;
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+.swiper-slide-active {
+    .hero-contact {
+        *:nth-child(1) {
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+        *:nth-child(2) {
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+        *:nth-child(3) {
+            -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+    }
+}
+.hero-contact {
+    * {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: fadeOutDown;
+        animation-name: fadeOutDown;
+    }
+    &:nth-child(1) {
+        webkit-animation-name: fadeInUp;
+        -webkit-animation-name: fadeInUp;
+        animation-name: fadeInUp;
+        -webkit-animation-delay: 3s;
+        animation-delay: 3s;
+    }
+    &:nth-child(2) {
+        webkit-animation-name: fadeInUp;
+        -webkit-animation-name: fadeInUp;
+        animation-name: fadeInUp;
+        -webkit-animation-delay: 2s;
+        animation-delay: 2s;
+    }
+    &:nth-child(3) {
+        webkit-animation-name: fadeInUp;
+        -webkit-animation-name: fadeInUp;
+        animation-name: fadeInUp;
+        -webkit-animation-delay: 3s;
+        animation-delay: 3s;
+    }
+    h1, h2 {
+        span {
+            &:after {
+                content: "";
+                width: 48px;
+                height: 60px;
+                position: absolute;
+                top: -40px;
+                right: -40px;
+                background-image: url("../img/hero/shape-1.png");
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+.hero-slider {
+    .swiper-buttons {
+        display: none;
+    }
+    .swiper-pagination {
+        margin-left: 1px;
+        position: relative;
+        text-align: left;
+        bottom: -20px;
+        z-index: 1;
+    }
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        margin: 0 2px !important;
+        transform: skew(340deg);
+        display: inline-block;
+        border-radius: 0;
+        opacity: 1;
+        background-color: #4b5966;
+        box-shadow: none;
+        transition: all 0.3s ease 0s;
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: $primary;
+        width: 30px;
+    }
+}
+
+.swiper-slide-active {
+    .hero-image {
+        img {
+            opacity: 1;
+        }
+    }
+}
+
+.hero-image {
+    img {
+        opacity: 0;
+    }
+    svg {
+        path {
+            fill: $bg-fff;
+            filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.015));
+        }
+    }
+}
+
+/* Responsive footer css */
+@media only screen and (max-width: 1199px) {
+    .hero-contact {
+        h1, h2 {
+            span {
+                &:after {
+                    height: 60px;
+                    width: 40px;
+                    top: -35px;
+                    right: -35px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .hero-contact {
+        h1, h2 {
+            span {
+                &:after {
+                    height: 40px;
+                    width: 28px;
+                    top: -25px;
+                    right: -25px;
+                }
+            }
+        }
+    }
+    .hero-slider {
+        .swiper-pagination {
+            display: none;
+            margin: 0 0 0 -1px;
+            bottom: -8px;
+            text-align: right;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .hero-slider {
+        .swiper-pagination {
+            bottom: 0;
+        }
+    }
+}

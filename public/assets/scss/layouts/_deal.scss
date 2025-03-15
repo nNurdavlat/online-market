@@ -1,0 +1,55 @@
+/* Deal */
+.bb-deal {
+    #dealend {
+        padding: 0;
+    }
+    .dealend-timer {
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        position: relative;
+        .dealend-timer {
+            background-color: $bg-box;
+            border-radius: $radius-15;
+            border: 1px solid $border-eee;
+        }
+        .time-block {
+            margin-left: 10px;
+            position: relative;
+            display: flex;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 28px;
+            color: $title-color;
+            .day {
+                margin-left: 5px;
+                position: relative;
+                font-size: 14px;
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+                line-height: 28px;
+                color: $title-color;
+            }
+            .time {
+                min-width: 20px;
+                position: relative;
+            }
+            .dots {
+                margin-top: -1px;
+                margin-left: 5px;
+                color: $title-color;
+            }
+        }
+    }
+}
+
+/* Responsive footer css */
+@media only screen and (max-width: 991px) {
+    .bb-deal {
+        .dealend-timer {
+            justify-content: center;
+        }
+    }
+}

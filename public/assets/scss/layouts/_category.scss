@@ -1,0 +1,66 @@
+/* category */
+.bb-category-contact {
+    .category-title {
+        h2 {
+            text-shadow: $text-border-shape;
+        }
+    }
+}
+
+.bb-category-block {
+   &:before {
+        content: "";
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: -29px;
+        left: 97px;
+        background-image: url("../img/category/top-shape.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    &:after {
+        content: "";
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        bottom: 0;
+        left: -29px;
+        background-image: url("../img/category/top-shape.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.bb-category-box {
+    &:hover {
+        .category-image {
+            img, svg {
+                animation: zoom-in-zoom-out .5s ease-out;
+            }
+        }
+    }
+    @keyframes zoom-in-zoom-out {
+        0% {
+          transform: scale(1, 1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.2, 1.2);
+        }
+        100% {
+          transform: scale(1, 1);
+          opacity: 1;
+        }
+      }
+}
+
+/* Responsive footer css */
+@media only screen and (max-width: 991px) {
+    .bb-category-block {
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}

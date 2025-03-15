@@ -1,0 +1,227 @@
+/* header */
+.bb-header-btn {
+    &:after {
+        display: none;
+    }
+}
+
+.header-search {
+    .bb-btn-group-form {
+        .inner-select {
+            .custom-select {
+                .custom-select {
+                    &:after {
+                        top: -5px;
+                    }
+                }
+                .select-options {
+                    left: -20px;
+                }
+            }
+        }
+        input {
+            &::placeholder {
+                font-size: 14px;
+                font-weight: 400;
+                color: $text-777;
+            }
+        }
+    }
+}
+
+.bottom-header {
+    .inner-bottom-header {
+        .bb-header-buttons {
+            .bb-acc-drop {
+                &:hover {
+                    .bb-dropdown-menu {
+                        margin-top: 15px;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+                .bb-dropdown-menu {
+                    box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.07);
+                }
+            }
+        }
+    }
+}
+
+.bb-main-menu-desk {
+    .bb-inner-menu-desk {
+        .bb-main-menu {
+            ul.navbar-nav {
+                li {
+                    &:hover {
+                        a.nav-link {
+                            color: $primary;
+                            &:after {
+                                border-color: $primary;
+                            }
+                        }
+                        span {
+                            color: $primary;
+                        }
+                    }
+                }
+                .bb-main-dropdown {
+                    .mega-menu {
+                        box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.07);
+                    }
+                    .bb-dropdown-item {
+                        &:after {
+                            @include ease3;
+                            content: "";
+                            width: 6px;
+                            height: 6px;
+                            display: inline-flex;
+                            border: 1px solid $secondary;
+                            padding-left: 3px;
+                            border-radius: 55%;
+                            position: absolute;
+                            top: 55%;
+                            right: -14px;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    &:hover {
+                        .mega-menu {
+                            margin-top: 10px;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+                .bb-dropdown {
+                    .bb-dropdown-item {
+                        &:after {
+                            @include ease3;
+                            content: "";
+                            width: 6px;
+                            height: 6px;
+                            display: inline-flex;
+                            border: 1px solid $secondary;
+                            padding-left: 3px;
+                            border-radius: 55%;
+                            position: absolute;
+                            top: 55%;
+                            right: -14px;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    .bb-dropdown-menu {
+                        box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.07);
+                    }
+                    &:hover {
+                        .bb-dropdown-menu {
+                            margin-top: 10px;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+                .bb-mega-dropdown {
+                    .bb-mega-item {
+                        &:after {
+                            content: "\ea6e";
+                            font-family: $remixico;
+                            padding: 0;
+                            font-size: 18px;
+                            font-weight: 300;
+                            position: absolute;
+                            right: 0;
+                        }
+                    }
+                    .bb-mega-menu {
+                        box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.07);
+                    }
+                    &:hover {
+                        .bb-mega-menu {
+                            margin-top: 15px;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+        .bb-dropdown-menu {
+            .inner-select {
+                .custom-select {
+                    width: 100%;
+                    height: 100%;
+                    padding-right: 15px;
+                    .select {
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .select-options {
+                        min-width: 175px;
+                        margin: 15px auto 0 auto;
+                        padding: 10px 0;
+                        left: auto;
+                        right: -15px;
+                        li {
+                            padding: 5px 20px !important;
+                        }
+                    }
+                    .custom-select {
+                        &:after {
+                            top: 20%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bb-mobile-menu {
+    @include scrollbar;
+    .bb-menu-inner {
+        .bb-menu-content {
+            ul {
+                li {
+                    .menu-toggle {
+                        width: 100%;
+                        height: 54px;
+                        padding-right: 10px;
+                        position: absolute;
+                        z-index: 2;
+                        top: 0;
+                        right: 0;
+                        cursor: pointer;
+                        background-color: transparent;
+                        display: flex;
+                        align-items: center;
+                        &:before {
+                            content: "+";
+                            margin-left: auto;
+                            font-weight: 500;
+                            color: $text-color;
+                            font-size: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bb-mobile-menu.bb-menu-open {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Responsive */
+@media screen and (max-width: 1199px) {
+    .bb-main-menu-desk {
+        .bb-inner-menu-desk {
+            .bb-main-menu {
+                position: unset;
+            }
+        }
+    }
+}

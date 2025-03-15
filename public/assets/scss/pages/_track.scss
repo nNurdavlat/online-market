@@ -1,0 +1,22 @@
+/* Track */
+.section-track {
+    .bb-progress {
+        li.active {
+            border-color: $text-color;
+            .number {
+                width: 35px;
+                height: 35px;
+                background-color: rgba(104, 110, 125, .9);
+            }
+            .icon {
+                i {
+                    color: $text-color;
+                }
+            }
+            .title {
+                font-weight: 600;
+                color: $text-color;
+            }
+        }
+    }
+}
