@@ -1,42 +1,4 @@
-<!--=========================================================
-Item Name: Blueberry - eCommerce Tailwind CSS Template.
-Author: Maraviya Infotech
-Version: 1
-Copyright 2024
-============================================================-->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blueberry - Multi Purpose eCommerce Template.">
-    <meta name="keywords" content="eCommerce, mart, apparel, catalog, fashion, Tailwind, multipurpose, online store, shop, store, template">
-    <title>Blueberry - eCommerce Tailwind CSS template</title>
-
-    <!-- Site Favicon -->
-    <link rel="icon" href="assets/img/favicon/favicon.png" type="image/x-icon">
-
-    <!-- Css All Plugins Files -->
-    <link rel="stylesheet" href="assets/css/vendor/remixicon.css">
-    <link rel="stylesheet" href="assets/css/vendor/aos.css">
-    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/slick.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
-    <link rel="stylesheet" href="assets/css/vendor/jquery-range-ui.css">
-
-    <!-- tailwindcss -->
-    <script src="assets/js/vendor/tailwindcss3.4.5.js"></script>
-
-    <!-- Main Style -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-</head>
-
-<body>
-
+<x-header title="Online Market"></x-header>
 <!-- Loader -->
 <div class="bb-loader min-w-full w-full h-screen fixed top-[0] left-[0] flex items-center justify-center bg-[#fff] z-[45]">
     <img src="assets/img/logo/loader.png" alt="loader" class="absolute">
@@ -4238,18 +4200,18 @@ Copyright 2024
 </a>
 
 <!-- Plugins -->
-<script src="assets/js/vendor/jquery.min.js"></script>
-<script src="assets/js/vendor/jquery.zoom.min.js"></script>
-<script src="assets/js/vendor/aos.js"></script>
-<script src="assets/js/vendor/swiper-bundle.min.js"></script>
-<script src="assets/js/vendor/smoothscroll.min.js"></script>
-<script src="assets/js/vendor/countdownTimer.js"></script>
-<script src="assets/js/vendor/owl.carousel.min.js"></script>
-<script src="assets/js/vendor/slick.min.js"></script>
-<script src="assets/js/vendor/jquery-range-ui.min.js"></script>
+<x-asset-link src="assets/js/vendor/jquery.min.js" type="js"></x-asset-link>
+<x-asset-link src="assets/js/vendor/jquery.zoom.min.js" type="js"></x-asset-link>
+<x-asset-link src="assets/js/vendor/aos.js" type="js"></x-asset-link>
+<x-asset-link src="assets/js/vendor/swiper-bundle.min.js" type="js"></x-asset-link>
+<x-asset-link src="assets/js/vendor/smoothscroll.min.js" type="js"></x-asset-link>
+<x-asset-link src="assets/js/vendor/countdownTimer.js" type="js"></x-asset-link>
+<x-asset-link src="assets/js/vendor/owl.carousel.min.js" type="js"></x-asset-link>
+<x-asset-link src="assets/js/vendor/slick.min.js" type="js"></x-asset-link>
+<x-asset-link src="assets/js/vendor/jquery-range-ui.min.js" type="js"></x-asset-link>
+
 
 <!-- main-js -->
-<script src="assets/js/main.js"></script>
+<x-asset-link src="assets/js/main.js" type="js"></x-asset-link>
 </body>
-
 </html>
