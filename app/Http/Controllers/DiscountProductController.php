@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class DiscountProductController extends Controller
 {
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([
