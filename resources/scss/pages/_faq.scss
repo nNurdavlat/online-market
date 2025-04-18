@@ -1,0 +1,37 @@
+/* Faq */
+.accordion-head {
+    &:after {
+        font-family: $remixico;
+        content: "\F1AF";
+        width: 15px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 18px;
+        color: $text-000;
+        font-weight: 500;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+.accordion-head.active-arrow {
+    &:after {
+        font-family: $remixico;
+        content: "\EA13";
+        width: 15px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 18px;
+        color: $text-000;
+        font-weight: 500;
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        transform: rotate(90deg);
+    }
+}

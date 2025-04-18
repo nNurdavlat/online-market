@@ -1,0 +1,115 @@
+/* Product */
+.bb-pro-box {
+    &:hover {
+        .bb-pro-img {
+            .flags {
+                opacity: 0;
+            }
+        }
+    }
+    .bb-pro-img {
+        .flags {
+            span {
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+            }
+        }
+        .bb-pro-actions {
+            .bb-btn-group {
+                &:hover {
+                    background-color: $primary;
+                    border-color: $primary;
+                    i {
+                        color: $text-fff;
+                    }
+                }
+            }
+        }
+    }
+    &:hover {
+        .bb-pro-img {
+            .inner-img {
+                img {
+                    transform: scale(1.1);
+                    &:not(:last-child) {
+                        opacity: 0;
+                    }
+                }
+                img.hover-img {
+                    opacity: 1;
+                }
+            }
+            .bb-pro-actions {
+                opacity: 1;
+                bottom: 10px;
+            }
+        }
+    }
+    .bb-pro-contact {
+        h4.bb-pro-title {
+            a {
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .dealend-timer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .dealend-timer {
+            padding: 5px;
+            background-color: $bg-box;
+            border-bottom: 1px solid $border-eee;
+        }
+        .time-block {
+            margin-left: 10px;
+            position: relative;
+            display: flex;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 28px;
+            color: $title-color;
+            .day {
+                margin: 0 5px;
+                position: relative;
+                font-size: 12px;
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+                line-height: 28px;
+                color: $title-color;
+            }
+            .time {
+                min-width: 20px;
+                position: relative;
+            }
+            .dots {
+                margin-top: -1px;
+                margin-left: 5px;
+                color: $title-color;
+            }
+        }
+    }
+}
+
+.qty-plus-minus {
+    .bb-qtybtn {
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        cursor: pointer;
+        font-size: 20px;
+        color: $text-777;
+    }
+    .qty-input {
+        background: transparent none repeat scroll 0 0;
+        border: medium none;
+    }
+}

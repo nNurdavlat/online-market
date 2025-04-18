@@ -1,0 +1,46 @@
+/* vendors */
+.bb-vendors-img {
+    .vendors-local-shape {
+        .inner-shape {
+            &:before {
+                content: "";
+                background-image: url("../img/banner-two/left-shape.png");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                height: 30px;
+                width: 30px;
+                position: absolute;
+                z-index: 1;
+                right: 0;
+                top: -50px;
+            }
+            &:after {
+                content: "";
+                background-image: url("../img/banner-two/left-shape.png");
+                background-repeat: no-repeat;
+                background-size: 100%;
+                height: 30px;
+                width: 30px;
+                position: absolute;
+                z-index: 1;
+                left: -50px;
+                bottom: -100px;
+            }
+        }
+    }
+}
+
+ul#vendorstab {
+    li.active {
+        a {
+            border-color: $primary;
+            .bb-vendors-box {
+                .inner-heading {
+                    h5 {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

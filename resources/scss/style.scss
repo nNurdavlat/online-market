@@ -1,0 +1,96 @@
+/*-----------------------------------------------------------------------------------
+
+Item Name: Blueberry - eCommerce Tailwind CSS template.
+Author: Maraviya Infotech
+Version: 1
+Copyright 2024
+
+-----------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------
+    Included CSS INDEX
+-----------------------------------------------------------------------------------
+
+01. Typography
+
+02. Utilities
+    - Mixing
+    - Variables
+
+03. components
+    - Header
+    - Footer
+    - Common
+    - Cart sidebar
+    - Category popup
+    - Quick view
+    - Newsletter popup
+
+04. Layout 
+    - Hero
+    - Category
+    - Product
+    - Deal
+    - Banner one
+    - Banner two
+    - New product
+    - Vendors
+    - Testimonials
+    - Blog 2
+    - Instagram
+
+05. Pages
+    - About
+    - Shop page
+    - Single product page
+    - Cart page
+    - Checkout page
+    - Faq
+    - Blog
+    - Wishlist
+    - Compare
+    - Track
+
+-----------------------------------------------------------------------------------*/
+
+/* Typography ( Import Typography ) */
+@import "base/_typography";
+
+/* Utilities ( Import Utilities ) */
+@import "utilities/_mixing";
+@import "utilities/_variables";
+
+/* components ( Import components ) */
+@import "components/_common";
+@import "components/_header";
+@import "components/_footer";
+@import "components/_cart-sidebar";
+@import "components/_category-popup";
+@import "components/_quickview";
+@import "components/_newsletter-popup";
+@import "components/_tools-sidebar";
+
+/* Layouts ( Import Layouts ) */
+@import "layouts/_hero";
+@import "layouts/_category";
+@import "layouts/_product";
+@import "layouts/_deal";
+@import "layouts/_banner-one";
+@import "layouts/_banner-two";
+@import "layouts/_new-product";
+@import "layouts/_vendors";
+@import "layouts/_testimonials";
+@import "layouts/_blog-2";
+@import "layouts/_instagram";
+
+/* Pages ( Import Pages ) */
+@import "pages/_about";
+@import "pages/_shop-page";
+@import "pages/_single-product-page";
+@import "pages/_cart-page";
+@import "pages/_checkout-page";
+@import "pages/_faq";
+@import "pages/_blog";
+@import "pages/_wishlist";
+@import "pages/_compare";
+@import "pages/_track";

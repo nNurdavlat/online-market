@@ -1,0 +1,21 @@
+/* Cart */
+.bb-cart-sidebar-block {
+    .bb-sb-blok-contact {
+        .input-box {
+            input {
+                &::placeholder {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 1399px) {
+    .bb-cart-table {
+        @include scrollbar;
+    }
+}

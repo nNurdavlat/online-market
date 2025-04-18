@@ -1,0 +1,265 @@
+/* Shop */
+ul.bb-shop-tags {
+    li.active-tags {
+        a {
+            color: $primary;
+            border-color: $primary;
+        }
+    }
+}
+
+.bb-shop-sidebar {
+    @include scrollbar;
+}
+
+.bb-shop-sidebar-open {
+    transform: translateX(0) !important;
+}
+
+.width-50 {
+    flex: 0 0 auto !important;
+    width: 50% !important;
+    .bb-pro-box {
+        display: flex;
+        .bb-pro-img {
+            max-width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $bg-fff;
+            border-bottom: 0;
+            border-right: 1px solid $border-eee;
+            border-top-left-radius: $radius-20;
+            border-bottom-left-radius: $radius-20;
+            .inner-img {
+                border-top-right-radius: 0;
+                border-bottom-left-radius: $radius-20;
+            }
+        }
+        .bb-pro-contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p {
+                display: flex;
+            }
+        }
+    }
+}
+
+.width-100 {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    .bb-pro-box {
+        display: flex;
+        .bb-pro-img {
+            max-width: 250px;
+            border-bottom: 0;
+            border-right: 1px solid $border-eee;
+            .inner-img {
+                border-top-right-radius: 0;
+                border-bottom-left-radius: $radius-20;
+            }
+        }
+        .bb-pro-contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p {
+                display: flex;
+            }
+        }
+    }
+}
+
+.bb-pro-pagination {
+    ul {
+        li.active {
+            a {
+                background-color: $secondary;
+                color: $text-fff;
+            }
+        }
+    }
+}
+
+.bb-pro-list-top {
+    .bb-bl-btn {
+        button.active {
+            background-color: $primary;
+            color: $text-fff;
+            border-radius: $radius-15;
+        }
+    }
+    .bb-select-inner {
+        .custom-select {
+            width: 130px;
+            justify-content: flex-end;
+            &:after {
+                right: -10px;
+                top: -5px;
+            }
+        }
+    }
+}
+
+.bb-sidebar-block-item {
+    input {
+        &:checked ~ .checked::after {
+            display: block;
+        }
+    }
+    .checked {
+        &:after {
+            left: -1px;
+            top: -1px;
+            width: 18px;
+            height: 18px;
+            border: 1px solid $primary;
+            content: "\EB7B";
+            position: absolute;
+            display: none;
+            background: $primary;
+            font-family: $remixico;
+            font-size: 14px;
+            font-weight: 800;
+            color: $bg-fff;
+            line-height: 16px;
+            text-align: center;
+        }
+    }
+}
+
+.bb-color-contact {
+    ul {
+        li.color-sidebar-active {
+            .bb-sidebar-block-item {
+                span {
+                    &:after {
+                        width: 22px;
+                        height: 22px;
+                        content: "\EB7B";
+                        font-family: $remixico;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: $text-fff;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.price-range-slider {
+    .range-bar {
+        border: none;
+        background: $text-000;
+        height: 3px;
+        width: 96%;
+        margin-left: 8px;
+        .ui-slider-range {
+            background: $primary;
+        }
+        .ui-slider-handle {
+            border: none;
+            border-radius: 25px;
+            background: $bg-fff;
+            top: -7px;
+            border: 2px solid $primary;
+            height: 17px;
+            width: 17px;
+            cursor: pointer;
+        }
+        .ui-slider-handle + span {
+            background: $primary;
+        }
+    }
+}
+
+.bb-tags {
+    ul {
+        li {
+            &:hover {
+                background-color: $primary;
+                a {
+                    color: $text-fff;
+                }
+            }
+        }
+    }
+}
+
+/* Responsive footer css */
+@media only screen and (max-width: 1199px) {
+    .width-50 {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .width-100 {
+        .bb-pro-box {
+            display: block;
+            overflow: hidden;
+            .bb-pro-img {
+                max-width: 100%;
+                border-bottom: 1px solid $border-eee;
+                border-right: 0;
+                .inner-img {
+                    border-bottom-left-radius: $radius-20;
+                }
+            }
+            .bb-pro-contact {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                p {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .width-50 {
+        .bb-pro-box {
+            max-width: 380px;
+            margin: auto;
+            display: block;
+            .bb-pro-img {
+                max-width: 100%;
+                border-bottom: 1px solid $border-eee;
+                border-right: 0;
+                .inner-img {
+                    border-bottom-left-radius: $radius-20;
+                }
+            }
+            .bb-pro-contact {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                p {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .bb-pro-list-top {
+        .bb-select-inner {
+            .custom-select {
+                width: 100px;
+                justify-content: flex-start;
+            }
+        }
+    }
+}

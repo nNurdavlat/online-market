@@ -1,0 +1,51 @@
+/* Instagram */
+.section-instagram {
+    .bb-title {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.bb-instagram-card{
+    .instagram-img{
+        &:before{
+            @include ease3;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: $black_05;
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            right: 0;
+            opacity: 0;
+            border-radius: $radius-30;
+        }
+        &:hover{
+            &:before{
+                opacity: 1;
+            }
+            &:after{
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+            }
+        }
+        &:after{
+            @include ease3;
+            font-family: $remixico;
+            content: "\EE66";
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            right: 0;
+            opacity: 0;
+            font-size: 38px;
+            color: $text-fff;
+            transform: scale(3) rotate(50deg);
+        }
+    }
+}

@@ -1,0 +1,74 @@
+/* Banner-one */
+.bg-box-color-one {
+    &:before {
+        background-color: $banner-shape-one;
+    }
+    &:after {
+        background-color: $banner-shape-one;
+    }
+}
+
+.bg-box-color-two {
+    &:before {
+        background-color: $banner-shape-two;
+    }
+    &:after {
+        background-color: $banner-shape-two;
+    }
+}
+
+.banner-box {
+    &:hover{
+        &:before{
+            left: -210px;
+            top: -210px;
+        }
+        &:after {
+            right: -80px;
+            bottom: -110px;
+        }
+    }
+    &:before {
+        @include ease3;
+        content: "";
+        width: 400px;
+        height: 600px;
+        position: absolute;
+        left: -200px;
+        top: -200px;
+        bottom: 0;
+        rotate: 40deg;
+        z-index: 0;
+    }
+    &:after {
+        @include ease3;
+        content: "";
+        width: 150px;
+        height: 300px;
+        position: absolute;
+        right: -70px;
+        bottom: -100px;
+        rotate: 40deg;
+        z-index: 0;
+    }
+}
+
+/* Responsive footer css */
+@media only screen and (max-width: 767px) {
+    .banner-box {
+        &:before {
+            left: -300px;
+        }
+        &:after {
+            right: -100px;
+        }
+        &:hover {
+            &:before {
+                left: -310px;
+            } 
+            &:after {
+                right: -110px;
+            }
+        }
+    }
+}

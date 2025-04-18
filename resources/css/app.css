@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.heart-active i {
+    color: #ef4444 !important; /* text-red-500 rangiga mos, qizil */
+}
+
+.cart-active i {
+    color: #10b981 !important; /* text-green-500 rangiga mos, yashil */
+}
+
