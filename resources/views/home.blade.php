@@ -183,14 +183,16 @@
                                             <span class="text-[14px] text-[#777] font-medium uppercase">New</span>
                                         </span>
                                         <a href="javascript:void(0)">
-                                            <div
-                                                class="inner-img relative block overflow-hidden pointer-events-none rounded-t-[20px]">
+                                            <div class="inner-img relative block overflow-hidden pointer-events-none rounded-t-[20px]">
                                                 <img class="main-img transition-all duration-[0.3s] ease-in-out w-full"
-                                                     src="assets/img/product/1.jpg" alt="product-1">
-                                                <img
-                                                    class="hover-img transition-all duration-[0.3s] ease-in-out absolute z-[2] top-[0] left-[0] opacity-[0] w-full"
-                                                    src="assets/img/product/back-1.jpg" alt="product-1">
+                                                     src="{{ isset($product->images[0]) ? \Illuminate\Support\Facades\Storage::url($product->images[0]->path) : asset('default-image.jpg') }}"
+                                                     alt="{{ $product->name }}">
+
+                                                <img class="hover-img transition-all duration-[0.3s] ease-in-out absolute z-[2] top-[0] left-[0] opacity-[0] w-full"
+                                                     src="{{ isset($product->images[1]) ? \Illuminate\Support\Facades\Storage::url($product->images[1]->path) : asset('default-image.jpg') }}"
+                                                     alt="{{ $product->name }}">
                                             </div>
+
                                         </a>
                                         <ul class="bb-pro-actions transition-all duration-[0.3s] ease-in-out my-[0] mx-[auto] absolute z-[9] left-[0] right-[0] bottom-[0] flex flex-row items-center justify-center opacity-[0]">
                                             <li class="bb-btn-group transition-all duration-[0.3s] ease-in-out w-[35px] h-[35px] mx-[2px] flex items-center justify-center bg-[#fff] border-[1px] border-solid border-[#eee] rounded-[10px]">
