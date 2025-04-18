@@ -7,3 +7,5 @@ Route::post('/wishlist/toggle', [ProductStatusesController::class, 'toggleWishli
 Route::post('/cart/toggle', [ProductStatusesController::class, 'toggleCart']);
 Route::get('/wishlist', [ProductStatusesController::class, 'wishlist']);
 Route::get('/cart', [ProductStatusesController::class, 'cart']);
+
+//bu test uchun
